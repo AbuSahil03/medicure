@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minds & Soul - Wellness Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <h2>Minds & Soul</h2>
+        </div>
+        <div class="nav-menu">
+            <button class="nav-item active" data-section="dashboard">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Dashboard</span>
+            </button>
+            <button class="nav-item" data-section="health">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Health</span>
+            </button>
+            <button class="nav-item" data-section="counselor">
+                <span class="nav-icon">👨‍⚕️</span>
+                <span class="nav-text">Counselor</span>
+            </button>
+            <button class="nav-item" data-section="developer">
+                <span class="nav-icon">💻</span>
+                <span class="nav-text">Learning</span>
+            </button>
+            <button class="nav-item" data-section="coach">
+                <span class="nav-icon">🎯</span>
+                <span class="nav-text">Coach</span>
+            </button>
+            <button class="nav-item" data-section="community">
+                <span class="nav-icon">👥</span>
+                <span class="nav-text">Community</span>
+            </button>
+            <button class="nav-item" data-section="profile">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="content-section active">
+            <div class="container">
+                <div class="welcome-header">
+                    <div class="welcome-info">
+                        <h1>Welcome back, <span id="user-name">Sahil</span>!</h1>
+                        <p class="welcome-date">Tuesday, September 30, 2025</p>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Profile" class="avatar-img">
+                        <div class="user-level">Wellness Warrior</div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Health Metrics Summary -->
+                    <div class="card metric-card">
+                        <div class="card__header">
+                            <h3>Today's Health</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="metrics-quick">
+                                <div class="metric-item">
+                                    <span class="metric-value" id="steps-count">8,547</span>
+                                    <span class="metric-label">Steps</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value" id="heart-rate">72</span>
+                                    <span class="metric-label">BPM</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value" id="sleep-hours">7.5h</span>
+                                    <span class="metric-label">Sleep</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value" id="water-glasses">6/8</span>
+                                    <span class="metric-label">Water</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Appointments -->
+                    <div class="card appointment-card">
+                        <div class="card__header">
+                            <h3>Next Appointment</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="appointment-info">
+                                <div class="appointment-details">
+                                    <div class="therapist-name">Dr. Sarah Johnson</div>
+                                    <div class="appointment-time">Oct 2, 10:00 AM</div>
+                                    <div class="appointment-type">Video Session</div>
+                                </div>
+                                <button class="btn btn--sm btn--primary">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning Progress -->
+                    <div class="card learning-card">
+                        <div class="card__header">
+                            <h3>Current Course</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="course-progress">
+                                <div class="course-name">JavaScript Fundamentals</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <div class="progress-text">16/24 lessons (65%)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Streaks -->
+                    <div class="card streaks-card">
+                        <div class="card__header">
+                            <h3>Activity Streaks</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="streak-items">
+                                <div class="streak-item">
+                                    <span class="streak-emoji">🏃‍♂️</span>
+                                    <span class="streak-count">7</span>
+                                    <span class="streak-label">Exercise</span>
+                                </div>
+                                <div class="streak-item">
+                                    <span class="streak-emoji">🧘‍♀️</span>
+                                    <span class="streak-count">12</span>
+                                    <span class="streak-label">Meditation</span>
+                                </div>
+                                <div class="streak-item">
+                                    <span class="streak-emoji">💻</span>
+                                    <span class="streak-count">5</span>
+                                    <span class="streak-label">Coding</span>
+                                </div>
+                                <div class="streak-item">
+                                    <span class="streak-emoji">💧</span>
+                                    <span class="streak-count">4</span>
+                                    <span class="streak-label">Water</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Tracker Section -->
+        <section id="health" class="content-section">
+            <div class="container">
+                <h1>Health Tracker</h1>
+                <div class="health-grid">
+                    <div class="card health-metric">
+                        <div class="card__header">
+                            <h3>Steps</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="metric-display">
+                                <div class="metric-number">8,547</div>
+                                <div class="metric-goal">Goal: 10,000</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card health-metric">
+                        <div class="card__header">
+                            <h3>Heart Rate</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="metric-display">
+                                <div class="metric-number">72 <span class="metric-unit">BPM</span></div>
+                                <div class="metric-status status--success">Normal</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card health-metric">
+                        <div class="card__header">
+                            <h3>Sleep Quality</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="metric-display">
+                                <div class="metric-number">7.5 <span class="metric-unit">hours</span></div>
+                                <div class="metric-score">Quality: 85%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card health-metric">
+                        <div class="card__header">
+                            <h3>Water Intake</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="metric-display">
+                                <div class="metric-number">6/8 <span class="metric-unit">glasses</span></div>
+                                <button class="btn btn--sm btn--primary" onclick="addWater()">Add Glass</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card chart-card">
+                        <div class="card__header">
+                            <h3>Weekly Steps</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="chart-container" style="position: relative; height: 200px;">
+                                <canvas id="stepsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card chart-card">
+                        <div class="card__header">
+                            <h3>Heart Rate Trend</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="chart-container" style="position: relative; height: 200px;">
+                                <canvas id="heartRateChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Counselor Booking Section -->
+        <section id="counselor" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Counselor Booking</h1>
+                    <button class="btn btn--primary" onclick="showBookingForm()">Book New Session</button>
+                </div>
+
+                <div class="appointments-section">
+                    <h2>Upcoming Appointments</h2>
+                    <div class="appointments-list" id="appointments-list">
+                        <!-- Appointments will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="therapists-section">
+                    <h2>Available Therapists</h2>
+                    <div class="therapists-grid" id="therapists-grid">
+                        <!-- Therapists will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack Developer Section -->
+        <section id="developer" class="content-section">
+            <div class="container">
+                <h1>Stack Developer Learning</h1>
+                
+                <div class="learning-dashboard">
+                    <div class="card progress-overview">
+                        <div class="card__header">
+                            <h3>Learning Progress</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="overall-progress">
+                                <div class="progress-stat">
+                                    <span class="stat-number">32%</span>
+                                    <span class="stat-label">Overall Progress</span>
+                                </div>
+                                <div class="progress-stat">
+                                    <span class="stat-number">22</span>
+                                    <span class="stat-label">Lessons Completed</span>
+                                </div>
+                                <div class="progress-stat">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label">Day Streak</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="courses-section">
+                        <h2>Your Courses</h2>
+                        <div class="courses-grid" id="courses-grid">
+                            <!-- Courses will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="projects-section">
+                        <h2>Your Projects</h2>
+                        <div class="projects-list" id="projects-list">
+                            <!-- Projects will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lifestyle Coach Section -->
+        <section id="coach" class="content-section">
+            <div class="container">
+                <h1>AI Lifestyle Coach</h1>
+                <div class="coach-container">
+                    <div class="chat-area">
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message coach-message">
+                                <div class="message-content">
+                                    <p>Hello Sahil! I'm your AI lifestyle coach. How can I help you today? I can assist with wellness goals, provide motivation, or answer questions about your health journey.</p>
+                                </div>
+                                <div class="message-time">9:00 PM</div>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" class="form-control" id="coach-input" placeholder="Ask me anything about wellness...">
+                            <button class="btn btn--primary" onclick="sendCoachMessage()">Send</button>
+                        </div>
+                    </div>
+                    <div class="coach-sidebar">
+                        <div class="card">
+                            <div class="card__header">
+                                <h3>Quick Actions</h3>
+                            </div>
+                            <div class="card__body">
+                                <button class="btn btn--outline btn--full-width mb-8" onclick="askCoach('How can I improve my sleep quality?')">Sleep Tips</button>
+                                <button class="btn btn--outline btn--full-width mb-8" onclick="askCoach('Create a workout plan for me')">Workout Plan</button>
+                                <button class="btn btn--outline btn--full-width mb-8" onclick="askCoach('Help me with stress management')">Stress Help</button>
+                                <button class="btn btn--outline btn--full-width" onclick="askCoach('Show my wellness goals')">My Goals</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Community</h1>
+                    <button class="btn btn--primary" onclick="createPost()">Create Post</button>
+                </div>
+
+                <div class="community-tabs">
+                    <button class="tab-btn active" data-tab="feed">Latest Posts</button>
+                    <button class="tab-btn" data-tab="groups">Support Groups</button>
+                    <button class="tab-btn" data-tab="chat">Live Chat</button>
+                </div>
+
+                <div class="community-content">
+                    <div id="feed-tab" class="tab-content active">
+                        <div class="posts-list" id="posts-list">
+                            <!-- Posts will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div id="groups-tab" class="tab-content">
+                        <div class="groups-grid">
+                            <div class="card group-card">
+                                <div class="card__body">
+                                    <h3>Anxiety Support</h3>
+                                    <p>A safe space to share experiences and coping strategies</p>
+                                    <div class="group-stats">
+                                        <span>245 members</span>
+                                        <span>12 online</span>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm">Join Group</button>
+                                </div>
+                            </div>
+                            <div class="card group-card">
+                                <div class="card__body">
+                                    <h3>Coding Beginners</h3>
+                                    <p>Learn programming together and share your progress</p>
+                                    <div class="group-stats">
+                                        <span>189 members</span>
+                                        <span>8 online</span>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm">Join Group</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="chat-tab" class="tab-content">
+                        <div class="live-chat">
+                            <div class="chat-rooms">
+                                <div class="chat-room active">
+                                    <h4>General Wellness</h4>
+                                    <span class="online-count">23 online</span>
+                                </div>
+                                <div class="chat-room">
+                                    <h4>Study Group</h4>
+                                    <span class="online-count">15 online</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="content-section">
+            <div class="container">
+                <h1>Profile & Settings</h1>
+                <div class="profile-grid">
+                    <div class="card profile-card">
+                        <div class="card__body">
+                            <div class="profile-header">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Profile" class="profile-img">
+                                <div class="profile-info">
+                                    <h3>Sahil</h3>
+                                    <div class="profile-level">Wellness Warrior</div>
+                                    <div class="profile-points">2,840 points</div>
+                                    <div class="profile-joined">Joined July 15, 2025</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card settings-card">
+                        <div class="card__header">
+                            <h3>Account Settings</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="settings-group">
+                                <label class="form-label">Email Notifications</label>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="settings-group">
+                                <label class="form-label">Push Notifications</label>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="settings-group">
+                                <label class="form-label">Data Sharing</label>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card achievements-card">
+                        <div class="card__header">
+                            <h3>Achievements</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="achievements-grid">
+                                <div class="achievement">
+                                    <span class="achievement-icon">🏆</span>
+                                    <span class="achievement-name">Week Warrior</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">💧</span>
+                                    <span class="achievement-name">Hydration Hero</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">📚</span>
+                                    <span class="achievement-name">Learning Legend</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">🧘‍♂️</span>
+                                    <span class="achievement-name">Mindful Master</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Book a Session</h3>
+                <button class="modal-close" onclick="hideBookingForm()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label class="form-label">Select Therapist</label>
+                        <select class="form-control" id="therapist-select">
+                            <option value="">Choose a therapist...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Session Type</label>
+                        <select class="form-control" id="session-type">
+                            <option value="video">Video Session</option>
+                            <option value="in-person">In-Person</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Preferred Date</label>
+                        <input type="date" class="form-control" id="session-date">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Preferred Time</label>
+                        <select class="form-control" id="session-time">
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Session Notes (Optional)</label>
+                        <textarea class="form-control" rows="3" placeholder="Any specific topics you'd like to discuss..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn--outline" onclick="hideBookingForm()">Cancel</button>
+                <button type="button" class="btn btn--primary" onclick="confirmBooking()">Book Session</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
